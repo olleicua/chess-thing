@@ -1,4 +1,4 @@
-var board = require('board').build();
+var board = require('./board').build();
 
 board.populate();
 board.display();
