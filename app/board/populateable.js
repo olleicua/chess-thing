@@ -1,4 +1,4 @@
-var piece = require('./piece');
+var piece = require('../piece/piece');
 
 module.exports = {
   populate: function() {
