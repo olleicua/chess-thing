@@ -1,7 +1,8 @@
-var baseGame = require('../app/game/game');
+var path = require('path');
+var game = require('../app/game/game').build();
 var board = require('../app/board/board').build();
 
-var game = baseGame.load('../games/demo');
+game.load('games/demo');
 board.populate();
 
 var move;
@@ -10,7 +11,7 @@ while (move = game.nextMove()) {
     board.volatileMove(move);
   } catch(error) {
     board.display();
-    console.log('Illegal move: ' + move);
+    console.log(error);
     process.exit();
   }
 }

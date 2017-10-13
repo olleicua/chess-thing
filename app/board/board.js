@@ -1,11 +1,13 @@
 var _ = require('underscore');
 var populateable = require('./populateable');
 var displayable = require('./displayable');
+var moveable = require('./moveable');
 
-module.exports = _.extend({}, populateable, displayable, {
+module.exports = _.extend({}, populateable, displayable, moveable, {
   build: function() {
     var _board = Object.create(this);
     _board.buildGrid();
+    _board.turn = 'White';
     return _board;
   },
 
