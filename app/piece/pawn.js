@@ -4,6 +4,8 @@ module.exports = _.extend(
   Object.create(require('./piece')), {
     type: 'Pawn',
     outlineCodepoint: '♙',
-    filledCodepoint: '♟'
+    filledCodepoint: '♟',
+
+    findForMove: function(board, move) {}
   }
 );

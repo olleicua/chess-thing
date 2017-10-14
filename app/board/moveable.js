@@ -20,7 +20,7 @@ module.exports = {
       B: 'Bishop',
       Q: 'Queen',
       K: 'King'
-    }[patternMatch[1]] || 'Pawn'];
+    }[(patternMatch || [])[1]] || 'Pawn'];
     return pieceType.findForMove(this, move);
   },
 

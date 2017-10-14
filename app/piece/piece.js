@@ -1,5 +1,3 @@
-var types = ;
-
 module.exports = {
   TYPES: {
     Rook: require('./rook'),
